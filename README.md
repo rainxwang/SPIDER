@@ -6,7 +6,7 @@
 2、将这些URL放入一个有序的url队列里面。
 3、然后从这个队列里面按顺序取出URL，解析DNS，获得主机IP，HTTP得到获得url指向的页面。一方面这个页面经过持久化，可以按要求保存到本地，另
 4、一方面可以对这个页面进行url解析，提取需要的新的url进行解析。
-![爬虫的示意图]()
+![爬虫的示意图](https://raw.githubusercontent.com/wangxinyu1997/SPIDER/master/readmeimage/%E7%88%AC%E8%99%AB%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 
 搜索引擎：两个重要的关系就是爬虫与索引。爬虫就是将互联网上的页面或者其他信息收集到本地，对这些信息创建索引。当用户输入关键字进行查询请求的时候，通过分析将索引库中匹配的结果经过一定的算法排列出来，发挥搜索结果。
 
@@ -38,7 +38,7 @@ url队列中的顺序：
 	在这个线程里面，会提取页面的url。url如果是新的，那么就会在结束的时候调用epoll任务，使得这个新的url可以被epoll关注
 7. 新的url能加入了，那么主要的就是循环第6步
 核心的数据结构体和函数接口提前想好：
-![](https://raw.githubusercontent.com/wangxinyu1997/SPIDER/master/spider%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+![](https://raw.githubusercontent.com/wangxinyu1997/SPIDER/master/readmeimage/spider%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
 ### 2.1 守护进程
 1.	守护进程（Daemon）是运行在后台的一种特殊进程。它独立于控制终端并且周期性地执行某种任务或等待处理某些发生的事件。脱离与终端可以避免在程序执行的时候显示任何终端信息，并且也不会被终端的信息打断
